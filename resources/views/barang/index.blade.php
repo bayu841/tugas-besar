@@ -52,7 +52,7 @@
                             <td>Rp{{($item->harga)}}</td>
                             <td>
                                 @if($item->gambar)
-                                    <img src="{{ asset('storage/' . $item->gambar) }}" width="100" alt="Gambar">
+                                    <img src="{{ asset('storage/' . $item->gambar) }}" style="width: 100px;" alt="Gambar">
                                 @else
                                     Tidak ada
                                 @endif
