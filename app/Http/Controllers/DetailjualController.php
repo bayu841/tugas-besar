@@ -87,14 +87,16 @@ use Barryvdh\DomPDF\Facade\Pdf;
         /**
          * Update the specified resource in storage.
          */
-        public function update(Request $request, Detail_penjualan $detail_penjualan)
+        public function update(Request $request, $id)
         {
+            $detail_penjualan = Detail_penjualan::findOrFail($id);
             $request->validate([
                 'penjualan_id'=>'required',
                 'barang_id'=>'required',
                 'jumlah'=>'required|integer|min:1',
                 'total_harga'=>'required|numeric|min:0',
             ]);
+
             $detail_penjualan->update($request->all());
             return redirect()->route('detailjual.index')->with('success', 'Berhasil update data!');
 

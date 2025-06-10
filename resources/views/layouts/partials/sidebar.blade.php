@@ -51,7 +51,7 @@
               <li class="nav-item">
                 <a href="{{route('detailjual.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Detail Penjualan</p>
+                  <p>Pembelian Barang</p>
                 </a>
               </li>
             </ul>
